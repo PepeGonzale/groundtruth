@@ -1,0 +1,38 @@
+{
+  "name": "groundtruth",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Grounded question answering over operational documents. Hybrid retrieval, sentence-level citations, and an explicit refusal path.",
+  "type": "module",
+  "scripts": {
+    "predev": "npm run ingest -- --source=local && npm run index",
+    "dev": "next dev",
+    "prebuild": "npm run ingest -- --source=local && npm run index",
+    "build": "next build",
+    "start": "next start",
+    "index": "tsx scripts/build-index.ts",
+    "eval": "tsx scripts/eval.ts",
+    "test": "GROUNDTRUTH_EMBEDDINGS=off node --test --import tsx tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "ask": "tsx scripts/ask.ts",
+    "preeval": "npm run ingest -- --source=local && npm run index",
+    "ingest": "tsx scripts/ingest.ts",
+    "sync": "npm run ingest -- --source=all && npm run index"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.71.2",
+    "@huggingface/transformers": "4.3.1",
+    "mammoth": "^1.13.0",
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "unpdf": "^1.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3"
+  }
+}
