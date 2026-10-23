@@ -1,0 +1,818 @@
+{
+  "generatedAt": "2026-10-23T15:21:38.624Z",
+  "answersMode": "extractive",
+  "index": {
+    "model": "Xenova/all-MiniLM-L6-v2",
+    "builtAt": "2026-10-23T15:21:38.030Z",
+    "chunks": 55,
+    "documents": 9
+  },
+  "totals": {
+    "questions": 27,
+    "answerable": 23,
+    "refusals": 4,
+    "contradictions": 3
+  },
+  "metrics": {
+    "retrievalRecallAt5": 1,
+    "mrr": 1,
+    "refusalAccuracy": 1,
+    "falseAnswerRate": 0,
+    "citationValidity": 1,
+    "contradictionRecall": 1,
+    "keywordAccuracy": 1
+  },
+  "results": [
+    {
+      "id": "retention-pod",
+      "question": "How long do we keep delivery records?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "DAT-305"
+      ],
+      "retrievedDocs": [
+        "DAT-305",
+        "OPS-101-A",
+        "OPS-101",
+        "OPS-110"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 1,
+      "citationsValid": 1,
+      "keywords": [
+        "7 years"
+      ],
+      "keywordsHit": [
+        "7 years"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 73.1,
+      "answerPreview": "Delivery records and POD — 7 years — delivery date [S2]"
+    },
+    {
+      "id": "retention-cctv",
+      "question": "How long is CCTV footage retained?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "DAT-305"
+      ],
+      "retrievedDocs": [
+        "DAT-305",
+        "OPS-110",
+        "OPS-101-A",
+        "OPS-104"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 1,
+      "citationsValid": 1,
+      "keywords": [
+        "30 days"
+      ],
+      "keywordsHit": [
+        "30 days"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 3.7,
+      "answerPreview": "CCTV in depots — 30 days — recording date [S2]"
+    },
+    {
+      "id": "retention-telemetry",
+      "question": "How long is vehicle telemetry retained?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "DAT-305"
+      ],
+      "retrievedDocs": [
+        "DAT-305",
+        "OPS-104",
+        "OPS-110"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 1,
+      "citationsValid": 1,
+      "keywords": [
+        "18 months"
+      ],
+      "keywordsHit": [
+        "18 months"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 5.2,
+      "answerPreview": "Vehicle telemetry — 18 months — end of trip [S1]"
+    },
+    {
+      "id": "deletion-request",
+      "question": "How fast must a verified deletion request be executed?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "DAT-305"
+      ],
+      "retrievedDocs": [
+        "DAT-305",
+        "SUP-402",
+        "QUA-210",
+        "OPS-104",
+        "OPS-101"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 1,
+      "citationsValid": 1,
+      "keywords": [
+        "30 days"
+      ],
+      "keywordsHit": [
+        "30 days"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 4.8,
+      "answerPreview": "A verified deletion request is executed within 30 days. [S1]"
+    },
+    {
+      "id": "claims-window",
+      "question": "What is the claims window?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "OPS-101-A",
+        "OPS-101"
+      ],
+      "retrievedDocs": [
+        "OPS-101-A",
+        "OPS-101",
+        "OPS-104",
+        "OPS-118",
+        "QUA-210"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 4,
+      "citationsValid": 4,
+      "keywords": [
+        "21"
+      ],
+      "keywordsHit": [
+        "21"
+      ],
+      "contradictionExpected": true,
+      "contradictionDetected": true,
+      "latencyMs": 2.9,
+      "answerPreview": "Cargo claims must be submitted within 21 calendar days of delivery, or of the scheduled delivery date when the shipment never arrived. [S1] Standard change windows are 22:00–04:00 CET. [S8] Sources disagree: OPS-101-A §4. Claims window states 21 days [S1], whi"
+    },
+    {
+      "id": "on-time-2025",
+      "question": "What is the on-time delivery target for 2025?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "OPS-101-A"
+      ],
+      "retrievedDocs": [
+        "OPS-101-A",
+        "OPS-101"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 3,
+      "citationsValid": 3,
+      "keywords": [
+        "98.2"
+      ],
+      "keywordsHit": [
+        "98.2"
+      ],
+      "contradictionExpected": true,
+      "contradictionDetected": true,
+      "latencyMs": 3.3,
+      "answerPreview": "From 1 April 2025 the on-time delivery target is 98.2%, measured monthly per customer. [S1] Sources disagree: OPS-101-A §2. Updated service levels states 98.2 % [S1], while OPS-101 §3. Service levels states 97.5 % [S7]. OPS-101-A takes precedence (explicit sup"
+    },
+    {
+      "id": "exception-notification",
+      "question": "How fast must we notify a customer after a temperature excursion?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "OPS-110",
+        "OPS-101"
+      ],
+      "retrievedDocs": [
+        "OPS-110",
+        "OPS-101-A",
+        "OPS-101",
+        "OPS-104"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 3,
+      "citationsValid": 3,
+      "keywords": [
+        "2 hours"
+      ],
+      "keywordsHit": [
+        "2 hours"
+      ],
+      "contradictionExpected": true,
+      "contradictionDetected": true,
+      "latencyMs": 3.8,
+      "answerPreview": "Notify the affected customer within 2 hours of confirming a major or critical excursion. [S2] Sources disagree: OPS-110 §5. Customer notification states 2 hours [S2], while OPS-101 §3. Service levels states 4 hours [S6]. OPS-110 takes precedence (later effecti"
+    },
+    {
+      "id": "chilled-range",
+      "question": "What temperature range do we transport chilled product at?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "OPS-110"
+      ],
+      "retrievedDocs": [
+        "OPS-110",
+        "OPS-101",
+        "OPS-101-A",
+        "SUP-402"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 2,
+      "citationsValid": 2,
+      "keywords": [
+        "2°C",
+        "8°C"
+      ],
+      "keywordsHit": [
+        "2°C",
+        "8°C"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 3.8,
+      "answerPreview": "Halcyon transports chilled product between 2°C and 8°C unless the customer provides a written specification with a different range. [S1] Temperature excursion: any logger reading outside the product range for longer than the tolerance stated in OPS-110. [S3]"
+    },
+    {
+      "id": "reefer-failure",
+      "question": "What happens if a reefer fails?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "OPS-110"
+      ],
+      "retrievedDocs": [
+        "OPS-110",
+        "OPS-104",
+        "QUA-210",
+        "SUP-402",
+        "DAT-305",
+        "OPS-101"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 1,
+      "citationsValid": 1,
+      "keywords": [
+        "cold room"
+      ],
+      "keywordsHit": [
+        "cold room"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 4.7,
+      "answerPreview": "If the reefer (cooling unit) fails and no backup is available, treat the shipment as a major excursion and move it to the nearest validated cold room. [S1]"
+    },
+    {
+      "id": "excursion-minor",
+      "question": "When is an excursion classified as minor?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "OPS-110"
+      ],
+      "retrievedDocs": [
+        "OPS-110",
+        "OPS-101",
+        "DAT-305",
+        "QUA-210",
+        "OPS-104"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 1,
+      "citationsValid": 1,
+      "keywords": [
+        "30 minutes"
+      ],
+      "keywordsHit": [
+        "30 minutes"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 4.7,
+      "answerPreview": "Minor — Outside range for less than 30 minutes, product between 0°C and 15°C — Document and notify QA within 30 minutes [S1]"
+    },
+    {
+      "id": "sev1-page",
+      "question": "Who do I page for a SEV1 at 02:00?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "OPS-104",
+        "OPS-118"
+      ],
+      "retrievedDocs": [
+        "OPS-104",
+        "OPS-118"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 4,
+      "citationsValid": 4,
+      "keywords": [
+        "primary"
+      ],
+      "keywordsHit": [
+        "primary"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 3.9,
+      "answerPreview": "Page the primary first. [S2] If there is no acknowledgement after 5 minutes, page the secondary. [S2] A SEV1 incident commander is assigned by the on-call primary. [S1] A SEV1 or SEV2 page must be acknowledged within 15 minutes. [S1]"
+    },
+    {
+      "id": "postmortem-deadline",
+      "question": "When is a postmortem due after a SEV1?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "OPS-104"
+      ],
+      "retrievedDocs": [
+        "OPS-104",
+        "OPS-118",
+        "QUA-210"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 1,
+      "citationsValid": 1,
+      "keywords": [
+        "5 business days"
+      ],
+      "keywordsHit": [
+        "5 business days"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 3.2,
+      "answerPreview": "A blameless postmortem is required for every SEV1 and for any SEV2 that exceeded its mitigation target. It is due within 5 business days of resolution. [S1]"
+    },
+    {
+      "id": "sev1-mitigation",
+      "question": "What is the mitigation target for a SEV1?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "OPS-104"
+      ],
+      "retrievedDocs": [
+        "OPS-104",
+        "OPS-118",
+        "OPS-101-A"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 1,
+      "citationsValid": 1,
+      "keywords": [
+        "4 hours"
+      ],
+      "keywordsHit": [
+        "4 hours"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 2.9,
+      "answerPreview": "The mitigation target for a SEV1 is 4 hours from acknowledgement. This is a target, not a guarantee. [S1]"
+    },
+    {
+      "id": "cab-cadence",
+      "question": "When does the change advisory board meet?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "QUA-210"
+      ],
+      "retrievedDocs": [
+        "QUA-210",
+        "OPS-118",
+        "SEC-201"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 1,
+      "citationsValid": 1,
+      "keywords": [
+        "Tuesday",
+        "14:00"
+      ],
+      "keywordsHit": [
+        "Tuesday",
+        "14:00"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 2.8,
+      "answerPreview": "The change advisory board (CAB) meets Tuesday and Thursday at 14:00 CET. [S1]"
+    },
+    {
+      "id": "year-end-freeze",
+      "question": "What is the year-end change freeze window?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "QUA-210"
+      ],
+      "retrievedDocs": [
+        "QUA-210",
+        "DAT-305",
+        "OPS-101-A",
+        "OPS-118"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 2,
+      "citationsValid": 2,
+      "keywords": [
+        "20 December",
+        "5 January"
+      ],
+      "keywordsHit": [
+        "20 December",
+        "5 January"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 3.1,
+      "answerPreview": "The year-end freeze runs from 20 December to 5 January. [S1] Standard change windows are 22:00–04:00 CET. [S2]"
+    },
+    {
+      "id": "supplier-approval",
+      "question": "Who approves a contract above EUR 250,000?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "SUP-402"
+      ],
+      "retrievedDocs": [
+        "SUP-402",
+        "OPS-101-A",
+        "OPS-101",
+        "SEC-201",
+        "OPS-118"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 2,
+      "citationsValid": 2,
+      "keywords": [
+        "board"
+      ],
+      "keywordsHit": [
+        "board"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 3.3,
+      "answerPreview": "A three-year contract at EUR 90,000 per year is above EUR 250,000 and requires a board resolution. [S1] EUR 50,001 to EUR 250,000 — Chief Financial Officer [S1]"
+    },
+    {
+      "id": "supplier-lead-time",
+      "question": "How long does standard supplier onboarding take?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "SUP-402"
+      ],
+      "retrievedDocs": [
+        "SUP-402",
+        "OPS-101",
+        "QUA-210"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 1,
+      "citationsValid": 1,
+      "keywords": [
+        "10 business days"
+      ],
+      "keywordsHit": [
+        "10 business days"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 3.5,
+      "answerPreview": "Standard supplier onboarding takes 10 business days from a complete request. [S1]"
+    },
+    {
+      "id": "supplier-insurance",
+      "question": "What is the minimum insurance cover for a supplier?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "SUP-402"
+      ],
+      "retrievedDocs": [
+        "SUP-402",
+        "OPS-101",
+        "SEC-201"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 1,
+      "citationsValid": 1,
+      "keywords": [
+        "5 million"
+      ],
+      "keywordsHit": [
+        "5 million"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 2.6,
+      "answerPreview": "Proof of insurance with a minimum cover of EUR 5 million. [S1]"
+    },
+    {
+      "id": "privileged-recert",
+      "question": "How often is privileged access recertified?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "SEC-201"
+      ],
+      "retrievedDocs": [
+        "SEC-201",
+        "SUP-402",
+        "DAT-305"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 1,
+      "citationsValid": 1,
+      "keywords": [
+        "90 days"
+      ],
+      "keywordsHit": [
+        "90 days"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 3.7,
+      "answerPreview": "Privileged access is recertified every 90 days. [S1]"
+    },
+    {
+      "id": "security-report",
+      "question": "Within what time must a security incident be reported?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "SEC-201"
+      ],
+      "retrievedDocs": [
+        "SEC-201",
+        "OPS-104",
+        "OPS-101-A"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 1,
+      "citationsValid": 1,
+      "keywords": [
+        "1 hour"
+      ],
+      "keywordsHit": [
+        "1 hour"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 5.4,
+      "answerPreview": "Report a suspected security incident to the security team within 1 hour of discovery. [S1]"
+    },
+    {
+      "id": "oncall-handover",
+      "question": "When is the on-call handover?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "OPS-118"
+      ],
+      "retrievedDocs": [
+        "OPS-118",
+        "OPS-104"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 2,
+      "citationsValid": 2,
+      "keywords": [
+        "Monday",
+        "10:00"
+      ],
+      "keywordsHit": [
+        "Monday",
+        "10:00"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 3.9,
+      "answerPreview": "The handover note is written before Monday 10:00 and contains: open incidents, scheduled changes in the coming week, known risks, and any pager configuration changes. [S1] The on-call primary acknowledges a page within 5 minutes. [S2]"
+    },
+    {
+      "id": "oncall-rotation",
+      "question": "How long is the on-call rotation?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "OPS-118"
+      ],
+      "retrievedDocs": [
+        "OPS-118",
+        "OPS-104"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 1,
+      "citationsValid": 1,
+      "keywords": [
+        "7 days"
+      ],
+      "keywordsHit": [
+        "7 days"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 3.6,
+      "answerPreview": "The primary rotation runs for 7 days, from Monday 10:00 to the following Monday 10:00 CET. [S2]"
+    },
+    {
+      "id": "oncall-fatigue",
+      "question": "What happens after a long SEV1 during the night?",
+      "kind": "answer",
+      "mode": "extractive",
+      "refused": false,
+      "expectedDocs": [
+        "OPS-118"
+      ],
+      "retrievedDocs": [
+        "OPS-118",
+        "OPS-104",
+        "DAT-305"
+      ],
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "citationsTotal": 1,
+      "citationsValid": 1,
+      "keywords": [
+        "12 hours"
+      ],
+      "keywordsHit": [
+        "12 hours"
+      ],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 2.9,
+      "answerPreview": "After resolving a SEV1 that ran longer than 4 hours during the night, the engineer hands the rotation to the secondary for the next 12 hours. This is not a reward; it is a control against a second bad decision. [S1]"
+    },
+    {
+      "id": "refusal-parental",
+      "question": "What is the parental leave policy?",
+      "kind": "refusal",
+      "mode": "refusal",
+      "refused": true,
+      "expectedDocs": [],
+      "retrievedDocs": [
+        "SEC-201",
+        "OPS-118",
+        "OPS-104",
+        "OPS-101-A",
+        "DAT-305"
+      ],
+      "hitAt5": false,
+      "reciprocalRank": 0,
+      "citationsTotal": 0,
+      "citationsValid": 0,
+      "keywords": [],
+      "keywordsHit": [],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 2.2,
+      "answerPreview": "The available documents do not contain sufficient information to answer this question. No retrieved chunk cleared the grounding threshold (confidence 0.61, coverage 0.67). The assistant refuses rather than guess."
+    },
+    {
+      "id": "refusal-stock",
+      "question": "What is the stock price today?",
+      "kind": "refusal",
+      "mode": "refusal",
+      "refused": true,
+      "expectedDocs": [],
+      "retrievedDocs": [
+        "OPS-101-A",
+        "SUP-402",
+        "OPS-110",
+        "QUA-210",
+        "OPS-118",
+        "OPS-101"
+      ],
+      "hitAt5": false,
+      "reciprocalRank": 0,
+      "citationsTotal": 0,
+      "citationsValid": 0,
+      "keywords": [],
+      "keywordsHit": [],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 2.1,
+      "answerPreview": "The available documents do not contain sufficient information to answer this question. No retrieved chunk cleared the grounding threshold (confidence 0.06, coverage 0.00). The assistant refuses rather than guess."
+    },
+    {
+      "id": "refusal-laptop",
+      "question": "How do I request a new laptop?",
+      "kind": "refusal",
+      "mode": "refusal",
+      "refused": true,
+      "expectedDocs": [],
+      "retrievedDocs": [
+        "SUP-402",
+        "OPS-118",
+        "SEC-201",
+        "QUA-210",
+        "DAT-305"
+      ],
+      "hitAt5": false,
+      "reciprocalRank": 0,
+      "citationsTotal": 0,
+      "citationsValid": 0,
+      "keywords": [],
+      "keywordsHit": [],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 2.1,
+      "answerPreview": "The available documents do not contain sufficient information to answer this question. No retrieved chunk cleared the grounding threshold (confidence 0.72, coverage 1.00). The assistant refuses rather than guess."
+    },
+    {
+      "id": "refusal-salary",
+      "question": "What is the chief executive's salary?",
+      "kind": "refusal",
+      "mode": "refusal",
+      "refused": true,
+      "expectedDocs": [],
+      "retrievedDocs": [
+        "SUP-402",
+        "DAT-305",
+        "OPS-118",
+        "OPS-101-A",
+        "SEC-201"
+      ],
+      "hitAt5": false,
+      "reciprocalRank": 0,
+      "citationsTotal": 0,
+      "citationsValid": 0,
+      "keywords": [],
+      "keywordsHit": [],
+      "contradictionExpected": false,
+      "contradictionDetected": false,
+      "latencyMs": 2.5,
+      "answerPreview": "The available documents do not contain sufficient information to answer this question. No retrieved chunk cleared the grounding threshold (confidence 0.57, coverage 0.67). The assistant refuses rather than guess."
+    }
+  ]
+}
