@@ -1,0 +1,27 @@
+{
+  "sources": [
+    {
+      "id": "corpus",
+      "type": "local",
+      "label": "Local documents",
+      "options": {
+        "path": "./corpus"
+      }
+    },
+    {
+      "id": "confluence",
+      "type": "confluence",
+      "label": "Confluence"
+    },
+    {
+      "id": "sharepoint",
+      "type": "sharepoint",
+      "label": "SharePoint"
+    },
+    {
+      "id": "gdrive",
+      "type": "gdrive",
+      "label": "Google Drive"
+    }
+  ]
+}

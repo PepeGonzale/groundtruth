@@ -1,0 +1,214 @@
+{
+  "generatedAt": "2026-10-23T15:23:26.318Z",
+  "connectors": [
+    {
+      "id": "confluence",
+      "type": "confluence",
+      "label": "Confluence",
+      "enabled": true,
+      "documents": 0,
+      "lastSyncAt": null,
+      "configured": false,
+      "error": null,
+      "detail": "Not configured. CONFLUENCE_BASE_URL, CONFLUENCE_EMAIL, CONFLUENCE_API_TOKEN"
+    },
+    {
+      "id": "corpus",
+      "type": "local",
+      "label": "Local documents",
+      "enabled": true,
+      "documents": 9,
+      "lastSyncAt": "2026-10-23T15:23:26.310Z",
+      "configured": true,
+      "error": null,
+      "detail": "0 added · 0 changed · 9 unchanged · 0 removed"
+    },
+    {
+      "id": "gdrive",
+      "type": "gdrive",
+      "label": "Google Drive",
+      "enabled": true,
+      "documents": 0,
+      "lastSyncAt": null,
+      "configured": false,
+      "error": null,
+      "detail": "Not configured. GOOGLE_DRIVE_FOLDER_ID + GOOGLE_SERVICE_ACCOUNT_JSON or GOOGLE_DRIVE_ACCESS_TOKEN"
+    },
+    {
+      "id": "sharepoint",
+      "type": "sharepoint",
+      "label": "SharePoint",
+      "enabled": true,
+      "documents": 0,
+      "lastSyncAt": null,
+      "configured": false,
+      "error": null,
+      "detail": "Not configured. SHAREPOINT_TENANT_ID, SHAREPOINT_CLIENT_ID, SHAREPOINT_CLIENT_SECRET, SHAREPOINT_SITE_ID"
+    }
+  ],
+  "documents": [
+    {
+      "meta": {
+        "id": "DAT-305",
+        "title": "Data retention",
+        "owner": "Data Governance",
+        "version": "5.1",
+        "effective": "2025-05-15",
+        "classification": "internal"
+      },
+      "body": "## 1. Principles\n\nKeep data only as long as there is a documented operational, contractual or\nlegal reason. When in doubt, keep less and ask Data Governance. Retention is a\ndefault, not a permission to keep everything.\n\n## 2. Retention schedule\n\n| Data class | Retention | Starts |\n| --- | --- | --- |\n| Vehicle telemetry | 18 months | end of trip |\n| Delivery records and POD | 7 years | delivery date |\n| Temperature logs | 7 years | delivery date |\n| CCTV in depots | 30 days | recording date |\n| Support tickets | 3 years | ticket closure |\n| Audit logs | 2 years | event date |\n| Backup copies | 35 days | backup date |\n| Marketing consent records | duration of consent plus 3 years | withdrawal |\n\n## 3. Deletion requests\n\n3.1 A verified deletion request is executed within **30 days**. The requester\nreceives confirmation when deletion is complete.\n\n3.2 Deletion covers primary storage, derived indexes and caches. A record left in\na search index is not deleted.\n\n3.3 Backups are not rewritten. Data in a backup expires with the backup cycle,\nwhich is 35 days. If a restore happens after a deletion, the deletion is\nreapplied within 2 business days.\n\n## 4. Legal hold\n\n4.1 A legal hold suspends deletion for the named records, custodians or date\nrange. It is issued by Legal in writing and takes precedence over this schedule.\n\n4.2 The hold is reviewed every 90 days. It is released only by Legal. Operations\ndoes not release a hold because a customer asked.\n\n## 5. Anonymisation\n\nWhere the operational need ends before the retention period, records are\nanonymised instead of deleted. Anonymisation must be irreversible: removing a\nname from a row while keeping the driver identifier is pseudonymisation, not\nanonymisation.\n\n## 6. Ownership\n\nEach data class has a named owner in the data catalogue. Owners confirm the\nretention rule annually. A class without an owner is escalated to the Data\nGovernance committee.",
+      "source": {
+        "connectorId": "corpus",
+        "type": "local",
+        "externalId": "dat-305-data-retention.md",
+        "hash": "c43e4b1e6a15326b8f09e41134b24823a1c0c09021c8fc97ed7627ec3cb3887e",
+        "updatedAt": "2026-10-22T09:43:18.735Z"
+      }
+    },
+    {
+      "meta": {
+        "id": "OPS-101",
+        "title": "Service level agreement — freight",
+        "owner": "Commercial Operations",
+        "version": "2.4",
+        "effective": "2024-01-15",
+        "classification": "internal"
+      },
+      "body": "## 1. Scope\n\nThis agreement covers scheduled and on-demand temperature-controlled freight\noperated by Halcyon Logistics for contracted customers in the EU and UK. It does\nnot cover customs brokerage, warehousing beyond 72 hours, or last-mile delivery\nsubcontracted to a third party.\n\n## 2. Definitions\n\n- **Delivery window**: the agreed arrival range, expressed in local time.\n- **On-time delivery**: arrival inside the delivery window, with a signed proof\n  of delivery (POD).\n- **Temperature excursion**: any logger reading outside the product range for\n  longer than the tolerance stated in OPS-110.\n- **Business hours**: 08:00–18:00 CET, Monday to Friday, excluding public holidays.\n\n## 3. Service levels\n\n| Metric | Target | Measured |\n| --- | --- | --- |\n| On-time delivery | 97.5% | monthly, per customer |\n| Temperature integrity | 99.4% of shipments | monthly, per lane |\n| Proof of delivery capture | 98.0% within 30 minutes of arrival | daily |\n| Exception notification | within 4 business hours of confirmation | per event |\n\nNotify the affected customer of a confirmed exception within 4 business hours.\n\nService levels are measured on completed shipments. Shipments cancelled by the\ncustomer are excluded from the denominator.\n\n## 4. Credits\n\n3.1 If on-time delivery falls below the target in a calendar month, the customer\nreceives a service credit of 2% of the monthly freight spend for every full\npercentage point below target, capped at 12% of that month's spend.\n\n3.2 Credits are issued automatically on the next invoice. They are not paid in\ncash and cannot be offset against a disputed invoice.\n\n3.3 A credit request must reference the affected shipment identifiers. Requests\nwithout shipment identifiers are rejected.\n\n## 5. Claims\n\n5.1 Cargo claims must be submitted within 14 calendar days of delivery, or of\nthe scheduled delivery date when the shipment never arrived.\n\n5.2 Claims submitted after the window are closed without review. The only\nexception is a documented legal hold notified by the customer's legal team.\n\n5.3 Halcyon acknowledges a claim within 2 business days and issues a disposition\nwithin 15 business days.\n\n## 6. Exclusions\n\nHalcyon is not liable for delays caused by force majeure, customer-caused loading\ndelays, incorrect address data, or product that was already outside its range at\npickup and documented as such on the collection note.\n\n## 7. Review cadence\n\nCommercial Operations reviews this agreement every six months with each customer\nabove EUR 250,000 of annual freight spend. Changes take effect on the first day\nof the following quarter.",
+      "source": {
+        "connectorId": "corpus",
+        "type": "local",
+        "externalId": "ops-101-sla-freight.md",
+        "hash": "3aab07d22cafb8edcee99c1a699efccad1eb5f9f5e3e8cd1b878ee1d92710f6f",
+        "updatedAt": "2026-10-22T09:46:31.375Z"
+      }
+    },
+    {
+      "meta": {
+        "id": "OPS-101-A",
+        "title": "Service level agreement — 2025 amendment",
+        "owner": "Commercial Operations",
+        "version": "1.0",
+        "effective": "2025-04-01",
+        "classification": "internal",
+        "supersedes": "OPS-101 sections 3.1, 3.4 and 5.2"
+      },
+      "body": "## 1. Purpose\n\nThis amendment updates the service levels and claim windows in OPS-101. It does\nnot replace OPS-101 in full. Where the two documents disagree, this amendment\nprevails from its effective date.\n\n## 2. Updated service levels\n\nFrom 1 April 2025 the on-time delivery target is **98.2%**, measured monthly per\ncustomer. The temperature integrity target remains 99.4% of shipments. Proof of\ndelivery capture remains 98.0% within 30 minutes of arrival.\n\nThe exception notification target is unchanged: a confirmed exception must be\nnotified within 4 business hours.\n\n## 3. Credit schedule\n\n2.1 The credit rate increases to 3% of monthly freight spend for every full\npercentage point below the 98.2% target, capped at 15% of that month's spend.\n\n2.2 Credits below EUR 250 are not issued. They are accumulated and applied when\nthe balance exceeds EUR 250.\n\n## 4. Claims window\n\n4.1 Cargo claims must be submitted within **21 calendar days** of delivery, or of\nthe scheduled delivery date when the shipment never arrived.\n\n4.2 The acknowledgement target stays at 2 business days. The disposition target\nstays at 15 business days.\n\n## 5. Transition\n\nShipments delivered before 1 April 2025 are measured against OPS-101. The\namendment applies to shipments delivered on or after that date. No retroactive\ncredits are issued for the first quarter of 2025.",
+      "source": {
+        "connectorId": "corpus",
+        "type": "local",
+        "externalId": "ops-101a-sla-amendment-2025.md",
+        "hash": "9c1202613e085ad4169ec8db337524a3c4e722fdd7a860fc3e218dd21b72688f",
+        "updatedAt": "2026-10-22T09:42:33.379Z"
+      }
+    },
+    {
+      "meta": {
+        "id": "OPS-104",
+        "title": "Incident response",
+        "owner": "Operations Reliability",
+        "version": "3.2",
+        "effective": "2025-02-01",
+        "classification": "internal"
+      },
+      "body": "## 1. Severity matrix\n\n| Severity | Definition | Examples |\n| --- | --- | --- |\n| SEV1 | Safety risk, regulatory breach, or fleet-wide outage | Cold chain breach above 2 hours, telemetry loss for more than 25% of the fleet, customer data exposure |\n| SEV2 | Major degradation affecting one customer or region | One lane stopped, reefer failure with product at risk, payment or POD pipeline down |\n| SEV3 | Limited degradation with a workaround | Single vehicle offline, delayed notifications, dashboard stale data |\n| SEV4 | Question or cosmetic issue | Copy error, access request, report formatting |\n\nWhen in doubt, declare one severity higher. Downgrading after assessment is\ncheap; a late SEV1 is not.\n\n## 2. Acknowledgement and mitigation\n\n2.1 A SEV1 or SEV2 page must be acknowledged within **15 minutes**. A SEV3 page\nmust be acknowledged within 1 hour.\n\n2.2 The mitigation target for a SEV1 is **4 hours** from acknowledgement. This is\na target, not a guarantee. If mitigation will take longer, the incident\ncommander updates the customer every 30 minutes.\n\n2.3 A SEV1 incident commander is assigned by the on-call primary. The commander\ndoes not debug; the commander coordinates, communicates and decides.\n\n## 3. Escalation\n\n3.1 Page the primary first. If there is no acknowledgement after 5 minutes, page\nthe secondary. After 10 minutes without acknowledgement, call the Operations\nDirector directly.\n\n3.2 For any SEV1 involving product temperature, page Quality Assurance at the\nsame time as the on-call engineer. QA owns disposition; operations does not\nrelease product without QA sign-off.\n\n3.3 Customer-facing communication for a SEV1 starts within 60 minutes. The\naccount director is added to the incident channel, not to the paging rotation.\n\n## 4. Communication cadence\n\n- SEV1: internal update every 30 minutes, customer update every 30 minutes.\n- SEV2: internal update every 2 hours, customer update every 4 hours.\n- SEV3: update at start and at resolution.\n- SEV4: no incident channel required.\n\nStatus page updates use plain language. Never include customer names, driver\nnames, or precise locations in a public status update.\n\n## 5. Resolution and postmortem\n\n5.1 An incident is resolved when the customer impact has stopped, not when the\nroot cause is known.\n\n5.2 A blameless postmortem is required for every SEV1 and for any SEV2 that\nexceeded its mitigation target. It is due within **5 business days** of\nresolution.\n\n5.3 Every postmortem produces owned actions with a due date. Actions are\nreviewed after 30 days. An action without an owner is not an action.\n\n## 6. Out of hours\n\nOutside business hours, follow OPS-118. Do not wait for a manager to declare a\nSEV1 if the definition in section 1 is met. Declaring is reversible; waiting is\nnot.",
+      "source": {
+        "connectorId": "corpus",
+        "type": "local",
+        "externalId": "ops-104-incident-response.md",
+        "hash": "db2e61079d8ac257105b53e5f93d76d5a615e33b54651e6e40af04265cde8877",
+        "updatedAt": "2026-10-22T09:42:43.174Z"
+      }
+    },
+    {
+      "meta": {
+        "id": "OPS-110",
+        "title": "Cold chain playbook",
+        "owner": "Quality Assurance",
+        "version": "4.0",
+        "effective": "2025-03-10",
+        "classification": "internal"
+      },
+      "body": "## 1. Product range\n\nHalcyon transports chilled product between **2°C and 8°C** unless the customer\nprovides a written specification with a different range. Frozen product is\ntransported at −18°C or colder. Ambient product is out of scope for this\nplaybook.\n\n## 2. Monitoring\n\n2.1 Every reefer carries two calibrated loggers. Readings are recorded every 5\nminutes and uploaded automatically at each depot scan.\n\n2.2 Loggers are calibrated annually. An uncalibrated logger invalidates the\ntemperature record for that trip and the shipment is treated as unverified until\nQA reviews it.\n\n2.3 A gap of more than 20 minutes in logger data is treated as an excursion of\nunknown duration and escalated to QA.\n\n## 3. Excursion classification\n\n| Class | Condition | Response |\n| --- | --- | --- |\n| Minor | Outside range for less than 30 minutes, product between 0°C and 15°C | Document and notify QA within 30 minutes |\n| Major | Outside range for 30 minutes or more, or product above 15°C | Quarantine and notify QA immediately |\n| Critical | Above 15°C for 2 hours or more, or any frozen product above −12°C | Quarantine, notify QA and the customer immediately |\n\n## 4. Response procedure\n\n4.1 Stop the vehicle at the first safe location. Do not open the cargo door for\ninspection unless QA explicitly asks for a manual reading.\n\n4.2 Switch to the backup cooling unit if available. Record the switch time.\n\n4.3 Quarantine the load in the nearest validated cold room within **15 minutes**\nof confirming a major or critical excursion. Quarantine means physical\nsegregation and a sealed hold label, not a note in the system.\n\n4.4 Notify QA within 30 minutes for a major excursion and immediately for a\ncritical one. QA decides release, relabel or destroy. Drivers and dispatchers\nnever decide disposition.\n\n## 5. Customer notification\n\nNotify the affected customer within **2 hours** of confirming a major or critical\nexcursion. The notification includes the lane, the affected pallet count, the\nlogger readings, and the quarantine location. Do not speculate about product\ncondition; QA provides the disposition.\n\n## 6. Documentation\n\n6.1 The excursion record contains: shipment identifiers, logger files, switch\ntimes, quarantine location, QA disposition and customer notification timestamp.\n\n6.2 Records are attached to the delivery record and retained according to\nDAT-305.\n\n## 7. Reefer failure\n\nIf the reefer (cooling unit) fails and no backup is available, treat the shipment\nas a major excursion and move it to the nearest validated cold room. Do not continue\nthe route to save time.",
+      "source": {
+        "connectorId": "corpus",
+        "type": "local",
+        "externalId": "ops-110-cold-chain-playbook.md",
+        "hash": "d9c4015f24e12a80815d37ec168d6004ed46b7123b61330044b633a7fec6ad8b",
+        "updatedAt": "2026-10-22T09:52:18.029Z"
+      }
+    },
+    {
+      "meta": {
+        "id": "OPS-118",
+        "title": "On-call rotation",
+        "owner": "Operations Reliability",
+        "version": "2.1",
+        "effective": "2025-01-20",
+        "classification": "internal"
+      },
+      "body": "## 1. Rotation\n\n1.1 The primary rotation runs for **7 days**, from Monday 10:00 to the following\nMonday 10:00 CET. The secondary rotation follows the same schedule offset by one\nweek.\n\n1.2 A rotation swap requires both engineers to agree in writing in the\n#ops-oncall channel and a calendar update at least 24 hours before the swap.\nSilent swaps are not recognised by the paging system.\n\n## 2. Responsibilities\n\n2.1 The on-call primary acknowledges a page within **5 minutes**. Acknowledging\nis not resolving: the primary must also declare whether an incident exists.\n\n2.2 If the primary does not acknowledge within 5 minutes, the pager escalates to\nthe secondary automatically. If neither acknowledges within 10 minutes, the\npager calls the Operations Director.\n\n2.3 The on-call engineer must be able to reach a laptop and a phone within 15\nminutes while on call. Alcohol and on-call do not mix. If you cannot meet the\nresponse commitment, swap the rotation before it starts.\n\n## 3. Handover\n\n3.1 The handover note is written before Monday 10:00 and contains: open\nincidents, scheduled changes in the coming week, known risks, and any pager\nconfiguration changes.\n\n3.2 The outgoing engineer remains available for questions until Monday 12:00.\n\n## 4. Compensation\n\nOn-call compensation, time off in lieu and stipend levels are defined in the HR\npolicy. This document intentionally does not restate them because they vary by\ncontract and country.\n\n## 5. Tools\n\n5.1 The paging tool is the only source of truth for who is on call. A calendar\nentry does not override the paging schedule.\n\n5.2 Test pages are sent every Monday at 09:30. A missed test page is treated as\na process failure and reviewed at the weekly operations review.\n\n## 6. Fatigue\n\nAfter resolving a SEV1 that ran longer than 4 hours during the night, the\nengineer hands the rotation to the secondary for the next 12 hours. This is not\na reward; it is a control against a second bad decision.",
+      "source": {
+        "connectorId": "corpus",
+        "type": "local",
+        "externalId": "ops-118-on-call.md",
+        "hash": "c58ae133204bc357cc9ea58a24df8e993074ca310a84e8af2ed7cab48904e599",
+        "updatedAt": "2026-10-22T09:43:00.536Z"
+      }
+    },
+    {
+      "meta": {
+        "id": "QUA-210",
+        "title": "Change management",
+        "owner": "Quality and Release",
+        "version": "3.4",
+        "effective": "2025-02-20",
+        "classification": "internal"
+      },
+      "body": "## 1. Change classes\n\n| Class | Examples | Approval |\n| --- | --- | --- |\n| Standard | Pre-approved, low-risk, reversible | Team lead, no CAB |\n| Normal | New service, configuration change, dependency upgrade | CAB |\n| Emergency | Fix for an active SEV1 or security exposure | ECAB, post-review |\n\n1.1 If a change does not fit a standard template, it is normal by default.\n\n1.2 A change that touches customer data or billing is never standard, regardless\nof size.\n\n## 2. Change advisory board\n\n2.1 The change advisory board (CAB) meets **Tuesday and Thursday at 14:00 CET**.\nSubmissions close 24 hours before the meeting.\n\n2.2 A submission includes: summary, systems affected, risk, rollback plan,\nmonitoring plan, and the change window.\n\n2.3 A normal change needs **5 business days** of lead time for review. A change\nsubmitted later is deferred to the next CAB, not approved by chat.\n\n## 3. Freeze windows\n\n3.1 The year-end freeze runs from **20 December to 5 January**. Only emergency\nchanges are approved.\n\n3.2 The peak-season freeze runs from **15 November to 31 December** for fleet\ntelemetry, routing and customer notification systems. Other systems remain open\nunder the normal process.\n\n3.3 A freeze exception requires the Operations Director and the Quality lead.\nThere is no unilateral exception.\n\n## 4. Execution\n\n4.1 Standard change windows are 22:00–04:00 CET. A change that needs daytime\nexecution states why in the submission.\n\n4.2 Every normal change has a rollback plan. \"Revert the commit\" is not a\nrollback plan unless the change is a single stateless deploy.\n\n4.3 Canary releases go to 5% of traffic for at least 30 minutes before full\nrollout. A canary without a defined success metric is just a slow deploy.\n\n## 5. Emergency changes\n\n5.1 An emergency change is approved by the incident commander and one Quality\nrepresentative. It does not wait for the next CAB.\n\n5.2 The change is documented within 24 hours and reviewed at the next CAB. An\nemergency change without a post-review is treated as an unapproved change.\n\n## 6. Post-implementation review\n\nA failed change is reviewed within 5 business days. The review covers detection,\nrollback time and whether the change should have been classified differently.",
+      "source": {
+        "connectorId": "corpus",
+        "type": "local",
+        "externalId": "qua-210-change-management.md",
+        "hash": "458aacc4a2d05ba2c1c4a12554d3b637cbe1b75b8bfe37eda5150d5ca20fe51e",
+        "updatedAt": "2026-10-22T09:58:32.959Z"
+      }
+    },
+    {
+      "meta": {
+        "id": "SEC-201",
+        "title": "Access control",
+        "owner": "Security",
+        "version": "3.0",
+        "effective": "2025-06-01",
+        "classification": "internal"
+      },
+      "body": "## 1. Identity\n\n1.1 All workforce accounts use the corporate identity provider. Local accounts\nare permitted only for break-glass access and are reviewed monthly.\n\n1.2 Multi-factor authentication is mandatory for every account, including\nservice accounts with interactive login. SMS is not an accepted second factor;\nuse a hardware key or an authenticator app.\n\n## 2. Authorisation\n\n2.1 Access follows least privilege. A role grants the minimum permissions needed\nfor the task, not the department's historical permissions.\n\n2.2 Production access is granted per service, not per environment. There is no\nstanding \"production admin\" group.\n\n2.3 Break-glass credentials are stored in the sealed vault, require two approvers,\nand trigger an alert when used. Every use is reviewed within one business day.\n\n## 3. Reviews\n\n3.1 Managers review their team's access **quarterly**. The review covers all\nsystems, not only the ones with a recent change.\n\n3.2 Privileged access is recertified every **90 days**. An unreviewed privileged\ngrant is revoked automatically at day 91.\n\n3.3 Service accounts are reviewed every 6 months. An owner who has left the\ncompany is not a valid owner.\n\n## 4. Joiners and leavers\n\n4.1 Access is provisioned only after the joiner has completed security training.\n\n4.2 On the last working day, all access is revoked within **24 hours**. The\nmanager confirms revocation; the security team audits a sample every month.\n\n4.3 A leaver's credentials are never reused or reassigned.\n\n## 5. Security incidents\n\nReport a suspected security incident to the security team within **1 hour** of\ndiscovery. Do not investigate alone, do not delete evidence, and do not discuss\nthe incident in public channels.\n\n## 6. Vendors and contractors\n\nVendor access is time-bound, sponsored by a named employee, and limited to the\nsystems in the contract. Vendor accounts expire automatically at the end of the\nengagement. A vendor requesting broader access goes through the same review as\nan employee.",
+      "source": {
+        "connectorId": "corpus",
+        "type": "local",
+        "externalId": "sec-201-access-control.md",
+        "hash": "ba3d21c7b70e9ca0c7f33fd9cb4558e58274722d4bda38f5b94aa61dbc18c127",
+        "updatedAt": "2026-10-22T09:43:11.040Z"
+      }
+    },
+    {
+      "meta": {
+        "id": "SUP-402",
+        "title": "Supplier onboarding",
+        "owner": "Procurement",
+        "version": "2.0",
+        "effective": "2024-11-05",
+        "classification": "internal"
+      },
+      "body": "## 1. Process\n\n1.1 Standard supplier onboarding takes **10 business days** from a complete\nrequest. If the supplier handles cold-chain product, add a QA audit and plan for\n20 business days.\n\n1.2 The six steps are:\n\n1. Supplier request submitted by the business owner.\n2. Due diligence: legal entity, ownership, sanctions screening.\n3. Risk assessment: financial, food safety, data protection.\n4. Contract and insurance review.\n5. Systems setup: vendor record, payment details, access if required.\n6. Probation: first 90 days monitored by the business owner.\n\n1.3 A request missing documents is returned, not queued. The clock restarts when\nthe request is complete.\n\n## 2. Required documents\n\n- Certificate of incorporation and VAT number.\n- Food safety certification for any supplier handling chilled or frozen product.\n- Proof of insurance with a minimum cover of **EUR 5 million**.\n- Signed data processing agreement when personal data is involved.\n- Bank verification letter in the supplier's legal name.\n\n## 3. Approval thresholds\n\n| Contract value | Approver |\n| --- | --- |\n| Up to EUR 50,000 | Procurement lead |\n| EUR 50,001 to EUR 250,000 | Chief Financial Officer |\n| Above EUR 250,000 | Board resolution |\n\n3.1 Thresholds apply to the total contract value, not the annual value. A\nthree-year contract at EUR 90,000 per year is above EUR 250,000 and requires a\nboard resolution.\n\n## 4. Probation\n\n4.1 The first 90 days are probation. The business owner records a review at day\n30, day 60 and day 90.\n\n4.2 A failed probation blocks new purchase orders until Procurement and the\nbusiness owner agree on a remediation plan.\n\n## 5. Rejection and appeals\n\nA rejected supplier receives a written reason within 5 business days. The\nsupplier may appeal once, in writing, within 30 days. The appeal is reviewed by\nProcurement and Legal; the decision is final.\n\n## 6. Conflicts of interest\n\nAny employee with a personal or financial relationship to a supplier declares it\nbefore the request is submitted. Undeclared relationships are a disciplinary\nmatter, not a procurement detail.",
+      "source": {
+        "connectorId": "corpus",
+        "type": "local",
+        "externalId": "sup-402-supplier-onboarding.md",
+        "hash": "efacdeadcac89c190325e1f41e5a339cd80c64f97c937563114a4cf6090e34d6",
+        "updatedAt": "2026-10-22T09:43:26.544Z"
+      }
+    }
+  ]
+}
